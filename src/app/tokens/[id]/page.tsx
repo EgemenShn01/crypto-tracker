@@ -79,7 +79,7 @@ const { data: coin, isLoading, isError } = useQuery({
           </div>
         </div>
 
-          <TokenPriceChart coinId={coin.id} days={chartDays} />
+          <TokenPriceChart coinId={coin.id} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div>
