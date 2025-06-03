@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Crypto Tracker
+
+Crypto Tracker is a modern, fully responsive cryptocurrency dashboard built with Next.js, React Query, TypeScript, and Tailwind CSS. The app provides real-time prices, interactive charts, and details for 160+ cryptocurrencies with lightning-fast UX, clean code, and professional UI/UX.
+
+
+---
+
+## Features
+
+* **Live Prices:** View real-time price, market cap, all-time high/low, and weekly high for top cryptocurrencies.
+* **Interactive Chart:** Smooth, animated price charts for each token (1D, 7D, 30D, 90D).
+* **Token Explorer:** Detailed token page with stats, external links (Website, Explorer, Twitter/X).
+* **Search & Filter:** Instant token search and filter.
+* **Dark Mode:** Beautiful light/dark themes, system-aware.
+* **News Banner:** Rotating, animated crypto news and alerts.
+* **Serverless API:** Next.js API routes proxy Coingecko, fixing CORS for local dev.
+* **Responsive Design:** Looks great on any device.
+* **Optimized Performance:** Data fetching and caching with React Query.
+* **Accessible:** Keyboard-friendly, high contrast, visually accessible components.
+
+---
+
+## Tech Stack
+
+* [Next.js 14+](https://nextjs.org/)
+* [React 18+](https://react.dev/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [shadcn/ui](https://ui.shadcn.com/)
+* [TanStack React Query](https://tanstack.com/query/latest)
+* [ApexCharts](https://apexcharts.com/)
+* [Coingecko API](https://www.coingecko.com/en/api)
+
+---
+
+## Demo
+
+Try the live app: [https://crypto-tracker-demo.vercel.app](https://crypto-tracker-demo.vercel.app)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   ```bash
+   git clone https://github.com/EgemenShn01/crypto-tracker.git
+   cd crypto-tracker
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Visit [http://localhost:3000](http://localhost:3000) in your browser.**
+
+---
+
+## Folder Structure
+
+```
+src/
+  app/         # Next.js app directory (routes, API)
+  components/  # UI components (charts, lists, header, etc.)
+  lib/         # API fetchers and utils
+  types/       # TypeScript types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* No API keys needed (uses public Coingecko endpoints).
+* All requests to Coingecko are proxied through Next.js API routes for CORS and security.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Customization & Contributions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Fork, star, and PRs are welcome!
+* Easily customize theme, color palette, and add more providers/news sources.
+* For custom endpoints, extend `src/lib/api.ts` and add new API routes in `src/app/api/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Created by [Your Name](https://github.com/EgemenShn01) – 2025**
