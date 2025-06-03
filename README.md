@@ -2,6 +2,9 @@
 
 Crypto Tracker is a modern, fully responsive cryptocurrency dashboard built with Next.js, React Query, TypeScript, and Tailwind CSS. The app provides real-time prices, interactive charts, and details for 160+ cryptocurrencies with lightning-fast UX, clean code, and professional UI/UX.
 
+![image](https://github.com/user-attachments/assets/6501b9aa-c060-4c2b-baf0-76b416ccf2eb)
+![image](https://github.com/user-attachments/assets/fd7bff28-efb7-44cf-8509-3a791a8ebd81)
+![image](https://github.com/user-attachments/assets/5a4d2838-13f5-434f-974f-9d28934b23a6)
 
 ---
 
@@ -96,4 +99,4 @@ src/
 ---
 
 
-**Created by [Your Name](https://github.com/EgemenShn01) – 2025**
+**Created by [Egemen Sahin](https://github.com/EgemenShn01) – 2025**
