@@ -19,7 +19,7 @@ export default function TokenPage() {
 
 const { data: coin, isLoading, isError } = useQuery({
   queryKey: ["coin-details", id],
-  queryFn: () => fetchCoinDetails(id),
+  queryFn: () => fetchCoinDetails(id as string),
   staleTime: 1000 * 60,
 });
 
