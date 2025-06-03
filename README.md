@@ -38,7 +38,7 @@ Crypto Tracker is a modern, fully responsive cryptocurrency dashboard built with
 
 ## Demo
 
-Try the live app: [https://crypto-tracker-demo.vercel.app](https://crypto-tracker-demo.vercel.app)
+Try the live app: [https://crypto-tracker-kappa-ten.vercel.app](https://crypto-tracker-kappa-ten.vercel.app/)
 
 ---
 
