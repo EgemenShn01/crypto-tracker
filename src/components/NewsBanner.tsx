@@ -7,10 +7,16 @@ const GRADIENTS = [
   "from-yellow-500 to-pink-500",
   "from-indigo-600 to-sky-400",
 ];
+type NewsItem = {
+  title: string;
+  url: string;
+  source: string;
+  date: string;
+};
 
 export function NewsBanner() {
   const [closed, setClosed] = useState(false);
-  const [newsList, setNewsList] = useState<any[]>([]);
+const [newsList, setNewsList] = useState<NewsItem[]>([]);
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
 

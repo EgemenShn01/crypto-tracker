@@ -15,7 +15,7 @@ export function calculateStats(prices: Array<[number, number]>) {
     };
   }
 
-  const priceArr = prices.map(([_, price]) => price);
+  const priceArr = prices.map(([, price]) => price);
 
   const ath = Math.max(...priceArr);
   const atl = Math.min(...priceArr);

@@ -1,6 +1,6 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import { fetchCoinDetails, fetchCoinChart } from "@/lib/api";
+import { fetchCoinDetails } from "@/lib/api";
 import { useParams, useRouter } from "next/navigation";
 import { Loader } from "@/components/ui/loader";
 import { Badge } from "@/components/ui/badge";
@@ -9,12 +9,13 @@ import { Header } from "@/components/Header";
 import {TokenPriceChart} from "@/components/TokenPriceChart";
 import { useState } from "react";
 import { Globe, Twitter, Link } from "lucide-react";
+import Image from "next/image";
 
 
 export default function TokenPage() {
   const { id } = useParams();
   const router = useRouter();
-  const [chartDays, setChartDays] = useState(30);
+  const [chartDays] = useState(30);
 
 const { data: coin, isLoading, isError } = useQuery({
   queryKey: ["coin-details", id],
@@ -51,8 +52,15 @@ const { data: coin, isLoading, isError } = useQuery({
       <Header />
       <div className="max-w-3xl mx-auto px-3 py-10">
         <div className="flex items-center gap-5 mb-6">
-          <img src={coin.image.large || coin.image.small} alt={coin.name} className="w-16 h-16 rounded-full shadow" />
-          <div>
+        <Image
+            src={coin.image?.large || coin.image?.small || "/placeholder.png"}
+            alt={coin.name}
+            width={64}
+            height={64}
+            className="rounded-full shadow"
+            />
+      
+        <div>
             <h1 className="text-3xl font-bold flex items-center gap-2">
               {coin.name}
               <Badge className="ml-2">{coin.symbol.toUpperCase()}</Badge>

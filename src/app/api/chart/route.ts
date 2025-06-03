@@ -9,7 +9,7 @@ export async function GET(req: Request) {
   try {
     const r = await axios.get(url);
     return NextResponse.json(r.data);
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Coingecko API error" }, { status: 500 });
   }
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from 'next/image';
 
 type Coin = {
   id: string;
@@ -36,7 +37,13 @@ export function CardList({ coins, search }: Props) {
           className="block"
         >
           <Card className="p-6 flex flex-col items-center shadow hover:shadow-lg hover:scale-[1.02] transition cursor-pointer">
-            <img src={coin.image} alt={coin.name} className="w-12 h-12 mb-2 rounded-full bg-white" />
+            <Image
+            src={coin.image}
+            alt={coin.name}
+            width={48}
+            height={48}
+            className="mb-2 rounded-full bg-white"
+            />
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xl font-bold">{coin.name}</span>
               <Badge>{coin.symbol.toUpperCase()}</Badge>

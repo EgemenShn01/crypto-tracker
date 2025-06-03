@@ -6,7 +6,6 @@ import { SearchInput } from "@/components/SearchInput";
 import { CardList } from "@/components/CardList";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card } from "@/components/ui/card";
-import type { Coin } from "@/types/coin";
 import { Loader } from '@/components/ui/loader';
 import { Header } from "@/components/Header";
 import { NewsBanner } from '@/components/NewsBanner';

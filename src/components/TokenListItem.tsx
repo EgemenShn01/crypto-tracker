@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import type { Coin } from "@/types/coin";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 type Props = {
   coin: Coin;
@@ -17,11 +18,13 @@ export function TokenListItem({ coin, selected, onClick }: Props) {
         `}
         onClick={onClick}
         >
-        <img
-            src={coin.image}
-            alt={coin.name}
-            className="w-8 h-8 rounded-full bg-white dark:bg-zinc-800"
-        />
+         <Image
+                src={coin.image}
+                alt={coin.name}
+                width={32}
+                height={32}
+                className="rounded-full bg-white dark:bg-zinc-800"
+                />
         <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
             <span className="font-semibold truncate text-zinc-900 dark:text-white">{coin.name}</span>

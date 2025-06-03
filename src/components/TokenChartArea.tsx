@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { TokenPriceChart } from "@/components/TokenPriceChart";
 import { TokenDetail } from "@/components/TokenDetail";
 import type { Coin } from "@/types/coin";
+import Image from "next/image";
 
 type Props = { token: Coin | null };
 
@@ -17,7 +18,13 @@ export function TokenChartArea({ token }: Props) {
       {token ? (
         <>
           <h2 className="text-3xl font-bold mb-3 flex items-center gap-3 text-zinc-900 dark:text-white">
-            <img src={token.image} alt={token.name} className="w-9 h-9 rounded-full bg-white" />
+            <Image
+            src={token.image}
+            alt={token.name}
+            width={36}
+            height={36}
+            className="rounded-full bg-white"
+            />
             {token.name}
             <span className="text-base text-gray-400 dark:text-gray-300">
               {token.symbol.toUpperCase()}
