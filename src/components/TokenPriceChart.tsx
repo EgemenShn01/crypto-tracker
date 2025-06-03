@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { fetchCoinChart } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Loader } from "./ui/loader";
+import { ApexOptions } from "apexcharts";
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -65,7 +66,7 @@ const { data, isLoading, isError } = useQuery({
     },
   ];
 
-  const options = {
+const options: ApexOptions = {
     chart: {
       type: "area",
       height: 400,
@@ -112,7 +113,6 @@ const { data, isLoading, isError } = useQuery({
       theme: isDark ? "dark" : "light",
       style: {
         fontSize: "14px",
-        color: isDark ? "#F1F5F9" : "#0f172a",
       },
       x: { format: "dd MMM" },
       marker: {
