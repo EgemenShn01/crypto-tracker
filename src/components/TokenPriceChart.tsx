@@ -56,7 +56,7 @@ const { data, isLoading, isError } = useQuery({
   }
 
   if (isError || !data) {
-    return <div className="text-red-600 dark:text-red-400 text-center mt-10">Chart data error.</div>;
+    return <div className="text-red-600 dark:text-red-400 text-center mt-10">After a while the error occurred again, API limit reached.</div>;
   }
 
   const series = [
