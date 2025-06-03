@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import {TokenPriceChart} from "@/components/TokenPriceChart";
-import { useState } from "react";
 import { Globe, Twitter, Link } from "lucide-react";
 import Image from "next/image";
 
@@ -15,7 +14,6 @@ import Image from "next/image";
 export default function TokenPage() {
   const { id } = useParams();
   const router = useRouter();
-  const [chartDays] = useState(30);
 
 const { data: coin, isLoading, isError } = useQuery({
   queryKey: ["coin-details", id],
